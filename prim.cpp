@@ -66,18 +66,20 @@ void prims(vector<vector<int>> graph) {
 }
 
 int main() {
-	string filename("TextFile.txt");
+	string filename("TextFile.txt"); //takes in an input file by that name
 	int vertices;
 	int edges;
 
-	ifstream input_file(filename);
+	ifstream input_file(filename); //reads inputfile and then assigns those numbers to be the vertices, edges, ect.
 
 	input_file >> vertices;
 	input_file >> edges;
 
-	vector<vector<int>> graph;
-	graph = vector<vector<int>>(vertices, vector<int>(vertices, 0));
+	//creates the graph
+	vector<vector<int>> graph; 
+	graph = vector<vector<int>>(vertices, vector<int>(vertices, 0)); 
 
+	//makes the connections
 	for (int i = 0; i < edges; i++) {
 		int adj1;
 		int adj2;
